@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    min-height: 100vh;
+    background-color: rgb(83, 208, 167);
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    min-height: 85vh;
+    border-radius: 12px;
+    background-color: rgb(246, 243, 249);
+    width: 70vw;
+    gap: 5vw;
+}
+.hanging-rod{
+    padding: 20px;
+}
+.hanging-rod img{
+    width: 300px;
+}
+#word{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+#word li{
+    width: 25px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: lowercase;
+    border-bottom: 2.5px solid black;
+    color: #333;
+    margin: 20px 0px;
+}
+#word li.filled{
+    position: relative;
+    bottom: 14px;
+    border: none;
+}
+.topic{
+    font-size: 27px;
+    font-weight: bold;
+    color: rgb(37, 32, 32);
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.incorrect-count{
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(236, 31, 31);
+}
+#alphabets{
+    display: grid;
+    grid-template: repeat(3,1fr)/repeat(7,1fr);
+    margin-top: 30px;
+    cursor: pointer;
+}
+.alphabet-set{
+    width: 36px;
+    /* font-weight: bold; */
+    text-align: center;
+    color: black;
+    padding: 0px 10px;
+    border-radius: 8px;
+    margin: 5px;
+    background-color: rgb(120, 215, 148);
+    font-size: 24px;
+}
