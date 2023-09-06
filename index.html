@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HangMan Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="hanging-rod">
+            <img id="img" src="./images/hangman-0.svg" alt="game mode image">
+        </div>
+        <div class="word-box">
+            <div class="topic">Guess the word</div>
+            <ul id="word">
+            </ul>
+            <div class="status">
+                <span class="topic">Incorrect Gueses:</span><span class="incorrect-count">0/6</span>
+            </div>
+            <div id="alphabets">
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
