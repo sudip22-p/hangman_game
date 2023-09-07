@@ -208,21 +208,41 @@ let randomWord;
 let imageSelection=1;
 let intervalId;
 const imageEl=document.getElementById("img");
-const incorrectCount=document.getElementsByClassName("incorrect-count")[0];
+const incorrectCount=document.getElementById("incorrect-count");
 const alphabets=document.getElementById("alphabets");
 const alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 const wordList=document.getElementById("word");
 
 
 function gameOverLoser(){
-    alert("Oh NO! you Lose!!");
-    location.reload();
+    let gameBox=document.getElementsByClassName("game-over")[0];
+    gameBox.style.display="flex";
+    let imgEl=document.getElementById("game-over-img");
+    imgEl.src="./images/loser.gif";
+    let wave=document.getElementsByClassName("wave")[0];
+    wave.innerHTML="Whoops,You lost!!!";
+    wave.style.color="#ed2aa5";
+    let textPart=document.getElementById("text-part");
+    textPart.innerHTML="The correct word was: ";
+    let wordDisplay=document.getElementById("word-display");
+    wordDisplay.innerHTML=randomWord;
 }
 
 
 function gameOverWinner(){
-    alert("Hurray! you Wins!!");
-    location.reload();
+    clearInterval(intervalId);
+    let gameBox=document.getElementsByClassName("game-over")[0];
+    gameBox.style.display="flex";
+    let imgEl=document.getElementById("game-over-img");
+    imgEl.src="./images/winner.gif";
+    let wave=document.getElementsByClassName("wave")[0];
+    wave.innerHTML="Hurray,You win!!!";
+    wave.style.color="#ed2aa5";
+    let textPart=document.getElementById("text-part");
+    textPart.innerHTML="You got the correct word: ";
+    textPart.style.color="green";
+    let wordDisplay=document.getElementById("word-display");
+    wordDisplay.innerHTML=randomWord;
 }
 
 
@@ -243,7 +263,7 @@ function handleClick(divEl){
                 let liToChange=document.getElementById("letter"+i.toString());
                 liToChange.classList.add("filled");
                 liToChange.innerHTML=letter;
-                divEl.style.backgroundColor="mediumspringgreen";
+                divEl.style.backgroundColor="rgb(78 124 227)";
             }
         }
       } else {
@@ -306,5 +326,8 @@ window.addEventListener("load",()=>{
         if(randomWord.length===filledEls.length){
             gameOverWinner();
         }
-    },100);
+    },50);
+});
+document.getElementsByClassName("btn")[0].addEventListener("click",()=>{
+    location.reload();
 });
