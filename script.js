@@ -214,6 +214,7 @@ const alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l
 const wordList = document.getElementById("word");
 
 
+
 function gameOverLoser() {
     let gameBox = document.getElementsByClassName("game-over")[0];
     gameBox.style.display = "flex";
@@ -227,6 +228,7 @@ function gameOverLoser() {
     let wordDisplay = document.getElementById("word-display");
     wordDisplay.innerHTML = randomWord;
 }
+
 
 
 function gameOverWinner() {
@@ -246,10 +248,12 @@ function gameOverWinner() {
 }
 
 
+
 // Function to check if a letter is present in the word
 function isLetterInWord(word, letter) {
     return word.includes(letter);
 }
+
 
 
 function handleClick(divEl) {
@@ -299,6 +303,7 @@ function handleClick(divEl) {
 }
 
 
+
 function placeAllAlphabets() {
     for (let i = 0; i < alphabetArray.length; i++) {
         let div = document.createElement("div");
@@ -310,6 +315,8 @@ function placeAllAlphabets() {
         });
     }
 }
+
+
 
 function setupEmptyBoxes() {
     randomWord = wordsArray[Math.floor(Math.random() * wordsArray.length)];//getting the random word
