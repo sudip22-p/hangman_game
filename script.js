@@ -326,6 +326,8 @@ function setupEmptyBoxes() {
         wordList.append(li);
     }
 }
+
+
 window.addEventListener("load", () => {
     placeAllAlphabets();
     setupEmptyBoxes();
@@ -336,6 +338,8 @@ window.addEventListener("load", () => {
         }
     }, 50);
 });
+
+
 document.getElementsByClassName("btn")[0].addEventListener("click", () => {
     location.reload();
 });
