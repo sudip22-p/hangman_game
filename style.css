@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     user-select: none;
     font-family: 'Roboto Condensed', sans-serif;
 }
-body{
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +16,8 @@ body{
     min-height: 100vh;
     background-color: rgb(83, 208, 167);
 }
-.wrapper{
+
+.wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,27 +28,32 @@ body{
     width: 85vw;
     gap: 5vw;
 }
-.hanging-rod{
+
+.hanging-rod {
     padding: 20px;
     padding-left: 50px;
 }
-.hanging-rod img{
+
+.hanging-rod img {
     width: 250px;
 }
-.word-box{
+
+.word-box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-#word{
+
+#word {
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
 }
-#word li{
+
+#word li {
     width: 25px;
     text-align: center;
     font-size: 26px;
@@ -55,30 +63,35 @@ body{
     color: #333;
     margin: 20px 0px;
 }
-#word li.filled{
+
+#word li.filled {
     position: relative;
     bottom: 14px;
     border: none;
 }
-.topic{
+
+.topic {
     font-size: 27px;
     font-weight: bold;
     color: rgb(37, 32, 32);
     margin-right: 5px;
     margin-bottom: 5px;
 }
-.incorrect-count{
+
+.incorrect-count {
     font-size: 23px;
     font-weight: bold;
     color: rgb(236, 31, 31);
 }
-#alphabets{
+
+#alphabets {
     display: grid;
-    grid-template: repeat(3,1fr)/repeat(7,1fr);
+    grid-template: repeat(3, 1fr)/repeat(7, 1fr);
     margin-top: 30px;
     cursor: pointer;
 }
-.alphabet-set{
+
+.alphabet-set {
     width: 36px;
     font-weight: bold;
     text-align: center;
@@ -89,7 +102,8 @@ body{
     background-color: rgb(120, 215, 148);
     font-size: 24px;
 }
-.game-over{
+
+.game-over {
     position: fixed;
     top: 0;
     height: 100%;
@@ -100,7 +114,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.inside-wrapper{
+
+.inside-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,14 +125,17 @@ body{
     padding: 50px;
     gap: 10px;
 }
-.inside-wrapper img{
+
+.inside-wrapper img {
     width: 250px;
     margin-bottom: 20px;
 }
-#word-display{
+
+#word-display {
     color: rgb(62, 62, 230);
 }
-.btn{
+
+.btn {
     padding: 10px;
     border-radius: 12px;
     background-color: rgb(119, 234, 152);
@@ -126,175 +144,222 @@ body{
     font-weight: bold;
     margin-top: 10px;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgb(8, 217, 68);
 }
+
 @media (max-width:1075px) {
-    body{
+    body {
         padding: 10px;
     }
-    .hanging-rod img{
+
+    .hanging-rod img {
         width: 220px;
     }
-    #word{
+
+    #word {
         gap: 6px;
     }
-    #word li{
+
+    #word li {
         width: 21px;
         font-size: 24px;
     }
-    .topic{
+
+    .topic {
         font-size: 25px;
     }
-    .incorrect-count{
+
+    .incorrect-count {
         font-size: 18px;
     }
-    #alphabets{
+
+    #alphabets {
         margin-top: 25px;
     }
-    .alphabet-set{
+
+    .alphabet-set {
         width: 30px;
         font-size: 20px;
     }
 }
+
 @media (max-width:889px) {
-    body{
+    body {
         padding: 10px;
     }
-    .wrapper{
+
+    .wrapper {
         width: 95vw;
         gap: 5vw;
     }
-    .hanging-rod img{
+
+    .hanging-rod img {
         width: 200px;
     }
 }
+
 @media (max-width:789px) {
-    .wrapper{
+    .wrapper {
         flex-direction: column;
         min-height: 100vh;
     }
-    #alphabets{
-        grid-template: repeat(2,1fr)/repeat(13,1fr);
+
+    #alphabets {
+        grid-template: repeat(2, 1fr)/repeat(13, 1fr);
         margin-top: 30px;
     }
-    .inside-wrapper img{
-    width: 220px;
+
+    .inside-wrapper img {
+        width: 220px;
+    }
 }
-}
+
 @media (max-width:575px) {
-    #alphabets{
-        grid-template: repeat(3,1fr)/repeat(9,1fr);
+    #alphabets {
+        grid-template: repeat(3, 1fr)/repeat(9, 1fr);
         margin-top: 30px;
     }
-    .inside-wrapper img{
+
+    .inside-wrapper img {
         width: 190px;
     }
 }
+
 @media (max-width:419px) {
-    #alphabets{
-        grid-template: repeat(3,1fr)/repeat(7,1fr);
+    #alphabets {
+        grid-template: repeat(3, 1fr)/repeat(7, 1fr);
         margin-top: 30px;
     }
-    .hanging-rod img{
+
+    .hanging-rod img {
         width: 180px;
     }
-    #alphabets{
+
+    #alphabets {
         margin-top: 12px;
     }
-    .topic{
+
+    .topic {
         font-size: 18px;
     }
-    .incorrect-count{
+
+    .incorrect-count {
         font-size: 14px;
     }
-    .alphabet-set{
+
+    .alphabet-set {
         width: 26px;
         font-size: 15px;
     }
+
     #word {
         gap: 4px;
     }
-    #word li{
+
+    #word li {
         width: 14px;
         font-size: 18px;
     }
-    .inside-wrapper img{
+
+    .inside-wrapper img {
         width: 180px;
     }
-    .inside-wrapper{
+
+    .inside-wrapper {
         padding: 30px;
     }
 }
+
 @media (max-width:287px) {
-    #alphabets{
-        grid-template: repeat(4,1fr)/repeat(6,1fr);
+    #alphabets {
+        grid-template: repeat(4, 1fr)/repeat(6, 1fr);
         margin-top: 20px;
     }
-    .hanging-rod img{
+
+    .hanging-rod img {
         width: 150px;
     }
-    .topic{
+
+    .topic {
         font-size: 16px;
     }
-    .incorrect-count{
+
+    .incorrect-count {
         font-size: 12px;
     }
-    .alphabet-set{
+
+    .alphabet-set {
         width: 21px;
         font-size: 12px;
     }
+
     #word {
         gap: 4px;
     }
-    #word li{
+
+    #word li {
         width: 10px;
         font-size: 13px;
         border-bottom: 2px solid black;
     }
-    .wrapper{
+
+    .wrapper {
         width: 98vw;
     }
-    .inside-wrapper img{
+
+    .inside-wrapper img {
         width: 150px;
     }
-    .inside-wrapper{
+
+    .inside-wrapper {
         padding: 16px;
     }
 }
+
 @media (max-width:219px) {
-    #alphabets{
-        grid-template: repeat(5,1fr)/repeat(5,1fr);
+    #alphabets {
+        grid-template: repeat(5, 1fr)/repeat(5, 1fr);
         margin-top: 18px;
     }
-    .hanging-rod img{
+
+    .hanging-rod img {
         width: 130px;
     }
-    .topic{
+
+    .topic {
         font-size: 14px;
     }
-    .incorrect-count{
+
+    .incorrect-count {
         font-size: 10px;
     }
-    .alphabet-set{
+
+    .alphabet-set {
         width: 18px;
         font-size: 10px;
     }
+
     #word {
         gap: 3px;
     }
-    #word li{
+
+    #word li {
         width: 8px;
         font-size: 11px;
         border-bottom: 1.5px solid black;
     }
-    .wrapper{
+
+    .wrapper {
         width: 100vw;
     }
-    .inside-wrapper img{
+
+    .inside-wrapper img {
         width: 110px;
     }
-    .inside-wrapper{
+
+    .inside-wrapper {
         padding: 10px;
     }
 }
